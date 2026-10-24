@@ -122,6 +122,21 @@ python -m pytest tests -q
 streamlit run app.py
 ```
 
+## Deploying on Render
+
+This repository includes a Render Blueprint at `render.yaml`. In Render, choose
+**New > Blueprint**, connect this GitHub repository, and deploy the Blueprint.
+It creates a free Python web service and runs Streamlit on Render's assigned
+port. The free service may spin down when inactive.
+
+The raw dataset is intentionally excluded from Git because it has no
+redistribution licence. The deployed dashboard and saved model pages can use
+the checked-in outputs and model artifacts, but the Time-Place Safety Twin's
+count forecast needs `data/raw/indian_roads_dataset.csv`; that dataset-dependent
+forecast will be unavailable unless you provide the file through an approved,
+private data source. Google Maps is optional and can be enabled by adding
+`GOOGLE_MAPS_API_KEY` as a secret environment variable in the Render service.
+
 Google Maps is optional. Set `GOOGLE_MAPS_API_KEY` in the environment to enable
 its map; without it, the app displays the standard hotspot map instead. On
 Windows PowerShell, set it for the current terminal with:
