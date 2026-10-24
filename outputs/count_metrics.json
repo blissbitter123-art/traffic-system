@@ -1,0 +1,35 @@
+{
+  "best_model": "cell_mean",
+  "metrics": {
+    "poisson": {
+      "mae": 2.9922927261263825,
+      "rmse": 3.9756927262528077,
+      "mape_pct": 33.39
+    },
+    "prev_month": {
+      "mae": 3.7432432432432434,
+      "rmse": 4.821591827161207,
+      "mape_pct": 35.61
+    },
+    "seasonal_avg": {
+      "mae": 2.874249249249249,
+      "rmse": 3.699488811642423,
+      "mape_pct": 27.37
+    },
+    "cell_mean": {
+      "mae": 2.5020475020475024,
+      "rmse": 3.2651047215559608,
+      "mape_pct": 23.73
+    }
+  },
+  "test_period": "2024-10 to 2025-03 (6 complete months)",
+  "train_period": "2022-01 to 2024-09",
+  "n_cell_months_train": 1221,
+  "n_cell_months_test": 222,
+  "n_eligible_cells": 37,
+  "intensity_cuts": {
+    "low_moderate_cut": 11.0,
+    "moderate_high_cut": 19.0
+  },
+  "random_seed": 42
+}

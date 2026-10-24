@@ -1,0 +1,28 @@
+# Raw data (never commit)
+data/raw/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+
+# Local MCP configuration may contain credentials.
+.agents/
+.claude/
+mcp.json
+mcp_config.json
+
+# Streamlit
+.streamlit/secrets.toml

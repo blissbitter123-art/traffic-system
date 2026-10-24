@@ -1,0 +1,62 @@
+{
+  "best_model": "hgb",
+  "selection_metric": "lowest_validation_log_loss among real models",
+  "beats_prior_baseline": false,
+  "baseline_note": "On this dataset the best real model does NOT beat the class-prior baseline on validation log-loss or macro-F1: recorded conditions (weather, road, time, place) carry no learnable severity signal. This is a property of the supplied data, reported honestly.",
+  "validation_metrics": {
+    "prior": {
+      "macro_f1": 0.23689995036517053,
+      "balanced_accuracy": 0.3333333333333333,
+      "accuracy": 0.5512291701039432,
+      "log_loss": 0.9757708921206759,
+      "brier_multiclass": 0.5852316556388537
+    },
+    "dummy": {
+      "macro_f1": 0.3341541656356773,
+      "balanced_accuracy": 0.3341402651639691,
+      "accuracy": 0.4169278996865204,
+      "log_loss": 21.016048684563604,
+      "brier_multiclass": 1.1661442006269593
+    },
+    "logreg": {
+      "macro_f1": 0.3046442617129154,
+      "balanced_accuracy": 0.3332314810168337,
+      "accuracy": 0.3176043557168784,
+      "log_loss": 1.099901770970767,
+      "brier_multiclass": 0.6677486378748334
+    },
+    "rf": {
+      "macro_f1": 0.30485323433972383,
+      "balanced_accuracy": 0.32781788275583185,
+      "accuracy": 0.48061376010559315,
+      "log_loss": 1.0391783767279923,
+      "brier_multiclass": 0.6282206751385863
+    },
+    "hgb": {
+      "macro_f1": 0.2379488651078934,
+      "balanced_accuracy": 0.3335911248140419,
+      "accuracy": 0.5512291701039432,
+      "log_loss": 0.9804449460203488,
+      "brier_multiclass": 0.5880886884917028
+    }
+  },
+  "test_metrics": {
+    "macro_f1": 0.24241382051759405,
+    "balanced_accuracy": 0.3333368005930401,
+    "accuracy": 0.566320645905421,
+    "log_loss": 0.9650757066186266,
+    "brier_multiclass": 0.5769819448959864
+  },
+  "test_period": "2025-01-01 to 2025-04-15 (partial year)",
+  "train_period": "2022-01-01 to 2023-12-31",
+  "validation_period": "2024-01-01 to 2024-12-31",
+  "n_train": 12205,
+  "n_val": 6061,
+  "n_test": 1734,
+  "classes": [
+    "minor",
+    "major",
+    "fatal"
+  ],
+  "random_seed": 42
+}
